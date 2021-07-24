@@ -1,0 +1,14 @@
+F:\Summer-InternShip\TestApi\LocationApi\bin\Debug\netcoreapp2.2\LocationApi.deps.json
+F:\Summer-InternShip\TestApi\LocationApi\bin\Debug\netcoreapp2.2\LocationApi.runtimeconfig.json
+F:\Summer-InternShip\TestApi\LocationApi\bin\Debug\netcoreapp2.2\LocationApi.runtimeconfig.dev.json
+F:\Summer-InternShip\TestApi\LocationApi\bin\Debug\netcoreapp2.2\LocationApi.dll
+F:\Summer-InternShip\TestApi\LocationApi\bin\Debug\netcoreapp2.2\LocationApi.pdb
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.csprojAssemblyReference.cache
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.csproj.CoreCompileInputs.cache
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.RazorAssemblyInfo.cache
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.RazorAssemblyInfo.cs
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.AssemblyInfoInputs.cache
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.AssemblyInfo.cs
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.RazorTargetAssemblyInfo.cache
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.dll
+F:\Summer-InternShip\TestApi\LocationApi\obj\Debug\netcoreapp2.2\LocationApi.pdb

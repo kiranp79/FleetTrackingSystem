@@ -1,0 +1,63 @@
+﻿@page
+@model KeepTrack.Models.Registration
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+}
+<button id="user" onclick="myFunction()" class="btn-login log-page-button">
+    <img src="~/img/1.png" id="loging" alt="img" class="btn-icon">
+</button>
+<button id="userout" class="btn-logout log-page-button">
+    <img src="~/img/logout.png" id="logout" onclick="logout();" alt="img" class="btn-icon">
+</button>
+<div class="sidebar" >
+    <img class="main-logo" src="~/img/title-logo.png">
+    <input type="button" class="btn-add-agent" value="Add Fleet" id="Button" onload="btndisabled();" onclick="location.href='@Url.Action("AddAgent","Home")'" />
+    <input type="button" class="btn-add-agent" value="All Fleets" id="Button" onload="btndisabled();" onclick="location.href='@Url.Action("AgentList","Home")'" />
+    <button class="accordion tooltip" onclick="dropdown()">Fleets On Work <div class="fa fa-caret-down"></div><span class="tooltiptext">Double click</span></button>
+    <div id="workingfleet" class="panel">
+        <p><button onclick="getfleet();" class="agents">Track All Fleets</button></p>
+    </div>
+</div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCqP8UOjPDuhwMZjkK-4IxE-wIb7VNG9g"></script>
+<div id="map" class="map"></div>
+@*<script src="https://maps.google.com/maps/api/js?key=AIzaSyDCqP8UOjPDuhwMZjkK-4IxE-wIb7VNG9g"></script>*@
+
+<div id="wrapper" class="flip-card" style="display: none;">
+
+    <div id="formContainer" class="flip-card-inner">
+        <div class="flip-card-front">
+            <form class="card-content-front animate" method="post" asp-action="Login">
+                <h1 class="heading">Login Form</h1>
+
+                <div class="container">
+                    <input type="text" placeholder="Email Address" id="Lemail" name="Lemail">
+                    <input type="password" placeholder="Password" id="Lpass" name="Lpass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <button type="button" onclick="login();" id="btnLogin" class="log-page-button">Login</button>
+                    <a id="btnreg" onclick="rotate();" class="btn-reg log-page-button">Register</a>
+                    <input id="remme" type="checkbox" style="margin:20px 10px 20px 20px;"> Remember me
+                    <a href="#" class="link">Forgot Password ?</a>
+                </div>
+
+            </form>
+        </div>
+        <div class="flip-card-back">
+            <form class="card-content-front animate" method="post">
+                <h1 class="heading">Registration Form</h1>
+
+                <div class="container">
+                    <input type="text" placeholder="Enter Company Name" asp-for="OwnerName" id="OwnerName" required>
+                    <input type="text" placeholder="Enter Contact" asp-for="OwnerContact" id="OwnerContact" required>
+                    <input type="text" placeholder="Enter Email ID" asp-for="OwnerEmail" id="OwnerEmail" required>
+                    <input type="password" placeholder="Enter Password" asp-for="Ownerpass" id="Ownerpass" required>
+                    <button type="button" onclick="registration();" class="log-page-button" id="btnSubmit">Submit</button><a id="register" onclick="revRotate()" class="btn-reg log-page-button">Login</a>
+
+                    <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <input type="hidden" value="0" id="fid" />
+</div>

@@ -1,0 +1,498 @@
+/* api key : 
+AIzaSyCBdUhy0bBKn8Z-DZtlx5rgyew7uTOyTOM
+*/
+
+.sidebar {
+    width: 300px;
+    background-color: rgb(5, 5, 75);
+    position: fixed;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 100%;
+}
+
+.map {
+    margin-left: 305px;
+    height: auto;
+}
+
+/*
+Login And Registration
+*/
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+/* Set a style for all buttons */
+.log-page-button {
+    background-color: white;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 26px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size: 20px;
+    border-radius: 3rem;
+}
+
+    .log-page-button:hover {
+        opacity: 0.8;
+    }
+
+.btn-login {
+    width: 6rem;
+    background-color: grey;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 6rem;
+    z-index: 2000;
+    position: fixed;
+    top: 1.5rem;
+    right: 4rem;
+    color: white;
+}
+
+.btn-logout {
+    width: 6rem;
+    background-color: grey;
+    text-align: center;
+    border-radius: 2%;
+    visibility: hidden;
+    overflow: hidden;
+    height: 6rem;
+    z-index: 2000;
+    position: fixed;
+    top: 1.5rem;
+    right: 4rem;
+    color: white;
+}
+
+.btn-reg {
+    width: 20%;
+    float: right;
+    position: relative;
+}
+
+.btn-icon {
+    height: 6rem;
+    width: 6rem;
+    margin-left: -20px;
+    margin-top: -14px;
+    border-radius: 50%;
+}
+/* Center the image and position the close button */
+.heading {
+    margin: 2rem 0;
+    text-align: center;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-child {
+    background-color: #fefefe;
+    -webkit-perspective: 150rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    margin: 4% auto 15% auto;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+    border: 1px solid rgba(14, 1, 1, 0.548);
+    width: 40%;
+    padding-bottom: 30px;
+    border-radius: 3rem;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    left: 25%;
+}
+
+.animate {
+    animation: zoom 0.6s
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/*new*/
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /* background-image: url(../img/img1.png); */
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    padding-top: 6rem;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+.flip-card-inner {
+    top: 0;
+    left: 30%;
+    position: relative;
+    width: 40%;
+    height: 95vh;
+    text-align: center;
+    transition: transform 1.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    backface-visibility: hidden;
+}
+
+/* .flip-card:hover .flip-card-inner {
+
+} */
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+}
+
+.flip-card-back {
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+/*index front*/
+
+.logo-img {
+    float: left;
+    position: relative;
+    /* margin-top: 20px; */
+    /* margin-left: 40px; */
+    height: 50px;
+    width: 50px;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    border-radius: 3rem;
+    outline: none;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+    .active, .collapsible:hover {
+        background-color: #555;
+    }
+
+    .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    /* transition: max-height 0.9s ease-out; */
+    background-color: #f1f1f1;
+}
+
+    .content:after {
+        padding: 0 18px;
+        max-height: 87px;
+        overflow: visible;
+        transition: max-height 5.2s ease-in;
+        background-color: #f1f1f1;
+    }
+
+
+
+.button {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 3rem;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+}
+
+.link {
+    text-decoration: none;
+    float: right;
+    margin-top: 20px;
+    color: rgb(0, 36, 156);
+}
+
+@media only screen and (max-width:980.7px) {
+    .flip-card-inner {
+        width: 60%;
+    }
+
+    .link {
+        text-decoration: none;
+        float: right;
+        margin-top: 20px;
+        color: rgb(0, 36, 156);
+    }
+
+    #remme {
+        margin: 26px 30px;
+    }
+}
+
+@media only screen and (max-width:690px) {
+    .flip-card-inner {
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .link {
+        text-decoration: none;
+        float: right;
+        ;
+        margin-right: 74px;
+        margin-top: 26px;
+        color: rgb(0, 36, 156);
+    }
+
+    #remme {
+        margin: 26px 30px;
+    }
+
+    .btn-reg {
+        width: 90%;
+        float: none;
+    }
+}
+
+@media only screen and (max-width:1360.78px) {
+    .btn-reg {
+        width: 90%;
+        float: none;
+    }
+
+    .link {
+        float: right;
+    }
+}
+
+.main-logo {
+    width: 11rem;
+    height: 10rem;
+    margin-top: 11px;
+    margin-left: 20%;
+    margin-bottom: 10px;
+}
+/* @media only screen and (max-width:400px){
+  .link{
+    margin-right:25% ;
+    margin-left: 25%;
+    margin-top:10px;
+  }
+  #remem{
+    margin-right:25% ;
+    margin-left: 25%;
+  }
+} */
+
+
+/*
+sidebar contain
+*/
+
+.btn-add-agent, .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin: 0 10px 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    margin: -5px 20px 5px 10px;
+    border-end-start-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: auto;
+}
+
+.btn-add-agent:hover {
+    background-color: #ccc;
+}
+
+.fa {
+    float: right;
+}
+
+@media only screen and (max-width:700px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .map {
+        margin: 5px;
+    }
+
+    .main-logo {
+        margin-left: 35%;
+    }
+
+    .btn-add-agent, .accordion {
+        margin-left: 40px;
+    }
+
+    .panel {
+        margin: -5px 26px 5px 40px;
+    }
+}
+
+/*Detail bar*/
+
+.agent-details {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #444;
+    transition: all 2s;
+}
+
+.transform {
+    transition: all .62s;
+    -webkit-transition: all .6s;
+    -moz-transition: all 2s;
+    -o-transition: all 2s;
+    -ms-transition: all 2s;
+}
+
+.transform-active {
+    height: 200px;
+}
+
+/*tool tip*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: rgba(0, 0, 0, 0.582);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        margin-left: 15px;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        float: left;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+.agents {
+    border: none;
+    text-decoration: none;
+    color: #000;
+    background-color: white;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+@media print {
+    .map {
+        height: 650px;
+    }
+}
+
+.map {
+    height: 97vh;
+    margin-left: 310px;
+}
